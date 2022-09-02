@@ -12,6 +12,11 @@ const RandomImage = () => {
         setImage(imgobj);
     }
 
+    //Required to load the first image
+    useEffect(() => {
+        fetchNewImage();
+    }, [])
+
     useEffect(() => {
         const updateImage = setInterval(() => {
             if (allowImageUpdate) {
